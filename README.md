@@ -1,25 +1,92 @@
-### Task
+# Blockchain Proposals App
 
-Create a simple decentralized application (dApp) that allows users to submit and view governance proposals. The application should have a frontend built with Next.js and TypeScript, and it should interact with a smart contract deployed on a test Ethereum network (e.g., Rinkeby or Goerli). The smart contract should allow users to create proposals and retrieve a list of all proposals.
+A decentralized application for creating and viewing proposals on the Ethereum blockchain.
 
-### Requirements
+## Key Features
 
-1.  **Frontend**:
+### Smart Contract Integration
 
-    - Use Next.js and TypeScript to create a simple user interface.
-    - Implement a form to submit a new governance proposal.
-    - Display a list of all submitted proposals.
+- Secure interaction with Ethereum blockchain using ethers.js
+- Custom contract wrapper for type-safe interactions
+- Support for different networks (Ethereum, testnet) through configurable providers
+- Transaction handling with status tracking and receipt confirmation
 
-2.  **Smart Contract**:
+### Modern Frontend
 
-    - Write a simple Solidity smart contract that allows users to:
+- Built with Next.js and React 19 for optimal performance
+- Component-based architecture with proper separation of concerns
+- Type-safe development with TypeScript
+- Responsive UI with Tailwind CSS
+- Gradient styling with consistent visual identity across components
 
-      - Create a proposal (with a title and description).
-      - Retrieve all proposals.
+### Custom React Hooks
 
-    - Deploy the smart contract to a test network (Rinkeby or Goerli).
+- `useProposals` - Hook for interacting with the Proposals smart contract
+- `useProvider` - Hook for getting network-specific Ethereum providers
+- State management for loading states and transaction tracking
+- Error handling for network and contract interactions
 
-3.  **Integration**:
+### Wallet Integration
 
-    - Use Web3.js or Ethers.js to connect the frontend to the smart contract.
-    - Ensure that the application can read from and write to the smart contract.
+- Seamless connection with Ethereum wallets via Dynamic Labs SDK
+- User-friendly connect wallet button
+- Wallet state management across the application
+- Support for multiple wallet providers
+
+### Production-Ready Features
+
+- Comprehensive test suite for components, hooks, and contracts
+- GitHub Actions CI/CD pipeline for automated testing
+- Environment-specific configuration
+- Error handling and user notifications
+- Support for transaction status tracking
+
+### Developer Experience
+
+- Modular code structure
+- Reusable UI components
+- Well-documented hooks and utilities
+- Type safety throughout the codebase
+- Automated testing on each commit
+
+## Getting Started
+
+```bash
+# Install dependencies
+yarn install
+
+# Run development server
+yarn dev
+
+# Run tests
+yarn test
+
+# Build for production
+yarn build
+```
+
+## Testing
+
+The project includes extensive tests for:
+
+- UI components
+- Custom React hooks
+- Contract interactions
+
+## Project Structure
+
+- `/components` - Reusable UI components
+- `/hooks` - Custom React hooks
+- `/contracts` - Smart contract integrations
+- `/providers` - React context providers
+- `/config` - Configuration files
+- `/app` - Next.js application routes
+
+## Continuous Integration
+
+The project uses GitHub Actions for CI/CD, automating:
+
+- Dependency installation
+- Linting
+- Running tests
+- Building the application
